@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hello</title>
+	<style>
+		 body{
+            background-image: url(images/offer.jpg);
+        }
+		.container{
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			color:crimson;
+		}
+		#target{
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			color:crimson;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="container">Rotater website</h1>
+	<button id="end" onclick="right()">click to move right</button>
+	<h1 id="target">Hello</h1>
+	<button id="start" onclick="left()">click to move left</button>
+	
+    <script>
+		//how to get th p tag value in js 
+		var element=document.querySelector("#target");
+		var textNode=element.childNodes[0];
+		var text=textNode.data;
+		function right(clicked_id){
+			text=text[text.length - 1]+text.substring(0,text.length - 1);
+			//textNode.data=text;
+			document.getElementById("target").innerHTML=text;
+			//console.log(text)
+			
+		}
+		function left(clicked2_id){
+			text=text.substring(1)+text[0]
+			//textNode.data=text;
+			document.getElementById("target").innerHTML=text;
+			//console.log(text)
+			
+			
+		}
+
+   
+    </script>
+    
+</body>
+</html>
